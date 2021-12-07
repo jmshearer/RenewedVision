@@ -23,7 +23,7 @@ Install the app on a web server and open in a browser.  When it finds a light fi
   - Add user data collection to act as a front-of-funnel for other initiatives
 
 ## Creating a custom object detector
-The object detector is simplay a TensorFlow.js model.  The current model only has one label so the app does no label-checking though the model could easily contain multiple labels (see suggestions above).  In order to create a custom detector:
+The object detector is a TensorFlow.js model.  The current model only has one label so the app does no label-checking though the model could easily contain multiple labels (see suggestions above).  In order to create a custom detector:
 1. Create a dataset in [Google AutoML](https://console.cloud.google.com/vision/dashboard)
 2. Load approximately 100-200 images and label them
 3. Train an Edge model (for offline/mobile use).  Recommend 1 node hour budget for 100-200 images, fastest detection mode (lowest accuracy)

@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Multiple object detection using pre trained model in TensorFlow.js</title>
+    <title>RenewEd:Vision</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <link rel="manifest" href="manifest.json">
     <meta charset="utf-8">
@@ -25,6 +25,9 @@
 	    <div id="logo"></div>  
 			
 			<div id="target" class="pulsating-circle"></div>			    
+		</div>
+		
+		<div class="error fullScreenLoader">
 		</div>
 		
 		<div class="showWhenLoading fullScreenLoader">

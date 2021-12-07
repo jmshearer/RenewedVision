@@ -1,6 +1,6 @@
 # RenewEd:Vision
 RenewEd:Vision is a proof-of-concept web app that performs the following functions:
-1. Locates lamps via a cellphone camera
+1. Locates light fixtures via a cellphone camera
 2. Calculates annual savings if the lamps were switched to LED fixtures
 
 ...think of it as a gamified self-assessment (sort of)

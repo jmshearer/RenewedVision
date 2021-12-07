@@ -17,7 +17,7 @@
   <body>  
 		<div class="hideWhenLoading">		  	    
 	    <div id="liveView" class="camView">	      
-				<video id="webcam" autoplay muted width="100%" height="100%"></video>				                
+				<video id="webcam" autoplay muted playsinline width="100%" height="100%"></video>				                
 	    </div>
 	    
 	    <div id="bottomBox"><div id="counter">$0</div><div id="countDetail">Estimated savings per year</div></div>
@@ -25,10 +25,7 @@
 	    <div id="logo"></div>  
 			
 			<div id="target" class="pulsating-circle"></div>			    
-		</div>
-		
-		<div class="error fullScreenLoader">
-		</div>
+		</div>				
 		
 		<div class="showWhenLoading fullScreenLoader">
 			<br />

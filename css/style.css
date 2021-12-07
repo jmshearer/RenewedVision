@@ -178,8 +178,8 @@ body {
 	 left: 50%;
 	 top: 50%;
 	 transform: translateX(-50%) translateY(-50%);
-	 width: 30px;
-	 height: 30px;	 
+	 width: 60px;
+	 height: 60px;	 
 }
  .pulsating-circle:before {
 	 content: "";
@@ -190,7 +190,7 @@ body {
 	 box-sizing: border-box;
 	 margin-left: -100%;
 	 margin-top: -100%;
-	 border-radius: 45px;	 
+	 border-radius: 90px;	 
 	 background-color: #01a4e9;
 	 animation: pulse-ring 1.25s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
 }

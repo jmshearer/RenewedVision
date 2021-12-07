@@ -10,11 +10,20 @@ $(function(){
 	
 
 	//Determine if running on a mobile device  
-	var mobile=false;	
+	var mobile=false;		
 	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
  		mobile=true;
 	}
-	
+	function isIpadOS() {
+  	return navigator.maxTouchPoints &&
+    	navigator.maxTouchPoints > 2 &&
+    	/MacIntel/.test(navigator.platform);
+	}
+	if(isIpadOS()){
+		mobile=true;
+	}		
+
+
 	// Check if webcam access is supported.
 	function getUserMediaSupported() {
 	  return !!(navigator.mediaDevices &&
@@ -51,8 +60,8 @@ $(function(){
 	  // Activate the webcam stream.
 	  navigator.mediaDevices.getUserMedia(constraints).then(function(stream) {
 	    video.srcObject = stream;
-	    video.addEventListener('loadeddata', function(){
-				$(".showWhenLoading").hide();
+	    video.addEventListener('loadeddata', function(){				
+				$(".loadingInfo").html("Starting object detector (may take a few seconds)...");
 				predictWebcam();
 			});	    
 	  });
@@ -124,6 +133,8 @@ $(function(){
 		//const img = document.getElementById('webcam');
   	const options = {score: 0.5, iou: 0.5, topk: 20};
 		const predictions = await model.detect(video, options);
+		
+		$(".showWhenLoading").hide();
 		
 		//remove highlights from previous
 		for (let i = 0; i < children.length; i++) {

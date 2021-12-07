@@ -5,7 +5,7 @@ RenewEd:Vision is a proof-of-concept web app that performs the following functio
 
 ...think of it as a gamified self-assessment (sort of)
 
-[Try a live demo](https://apps.shearer-consulting.com/renewed)
+[Try a live demo](https://apps.shearer-consulting.com/renewed) | [Video Walkthrough](https://youtu.be/w43G2AyFVn8)
 
 ## Using the app
 Install the app on a web server and open in a browser.  When it finds a lamp, a green dot will display followed by a pulsating leaf after the user has dwelled on the lamp for a few seconds (to prevent false positives).  It will then add a fixed amount to the annual savings total to give the user an estimate for annual savings that could be realized by switching to LED lights.

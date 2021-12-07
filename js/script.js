@@ -7,22 +7,6 @@ $(function(){
 	var showBox=false;
 	const video = document.getElementById('webcam');
 	const liveView = document.getElementById('liveView');
-	
-
-	//Determine if running on a mobile device  
-	var mobile=false;		
-	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
- 		mobile=true;
-	}
-	function isIpadOS() {
-  	return navigator.maxTouchPoints &&
-    	navigator.maxTouchPoints > 2 &&
-    	/MacIntel/.test(navigator.platform);
-	}
-	if(isIpadOS()){
-		mobile=true;
-	}		
-
 
 	// Check if webcam access is supported.
 	function getUserMediaSupported() {
@@ -50,29 +34,23 @@ $(function(){
 	  	  	  	  		  
 	  
 	  //Set up parameters
-	  var constraints = {
-	    video: true
-	  };	  
-	  if(mobile){
-	  	constraints = { video: { facingMode: { exact: "environment" } } };
-	  }
-			  
+	  var constraints = { video: { facingMode: "environment" } };
+	  	  
 	  // Activate the webcam stream.
 	  navigator.mediaDevices.getUserMedia(constraints).then(function(stream) {
 	    video.srcObject = stream;
 	    video.addEventListener('loadeddata', function(){				
-				$(".loadingInfo").html("Starting object detector (may take a few seconds)...");
+				$(".loadingInfo").html("Starting light fixture detector (may take a few seconds)...");
 				predictWebcam();
 			});	    
 	  });
 	
 	});
-
-		
 								
 	//Load the model
 	var model = undefined;		
 	async function loadModel() {
+		//Load the object detector.  Note that this takes a full path to the model JSON		
 	  model = await tf.automl.loadObjectDetection('/renewed/model/model.json');  
 	}
 	loadModel().then(function(){
@@ -193,7 +171,8 @@ $(function(){
 		} else {
 			hideTarget();
 		}
-		
+
+		//Request the next frame		
 		window.requestAnimationFrame(predictWebcam);				
 	}
 	

@@ -10,11 +10,13 @@
     <title>RenewEd:Vision</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <link rel="manifest" href="manifest.json">
-    <meta charset="utf-8">
-    <!-- Import the webpage's stylesheet -->
+    <meta charset="utf-8">    
     <link rel="stylesheet" href="css/style.css?n=<?php echo time(); ?>">
-  </head>  
-  <body>  
+  </head>
+	  
+  <body>
+	
+		<!-- Actual page content -->  
 		<div class="hideWhenLoading">		  	    
 	    <div id="liveView" class="camView">	      
 				<video id="webcam" autoplay muted playsinline width="100%" height="100%"></video>				                
@@ -27,6 +29,7 @@
 			<div id="target" class="pulsating-circle"></div>			    
 		</div>				
 		
+		<!-- Preloader -->
 		<div class="showWhenLoading fullScreenLoader">
 			<br />
 			<br />
@@ -38,7 +41,7 @@
 			<button id="webcamButton" class="myButton" style="display: none;">Get Started</button>
 		</div>	  	      
 	  
-	  <!-- Import the page's JavaScript to do some stuff -->
+	  <!-- Do some stuff -->
 	  <script src="js/script.js?n=<?php echo time(); ?>" defer></script>
   </body>
 </html>

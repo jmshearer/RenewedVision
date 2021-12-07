@@ -9,6 +9,11 @@
   <head>
     <title>RenewEd:Vision</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="apple-touch-icon" href="images/appicon.jpg"/>
+    <link rel="apple-touch-icon-precomposed" href="images/appicon.jpg"/>    
+    <link rel="icon" type="image/png" sizes="75x75" href="images/appicon.jpg">    
+    <meta name="apple-mobile-web-app-capable" content="yes" />    
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <link rel="manifest" href="manifest.json">
     <meta charset="utf-8">    
     <link rel="stylesheet" href="css/style.css?n=<?php echo time(); ?>">

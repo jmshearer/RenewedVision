@@ -28,13 +28,37 @@ $(function(){
 	  }
 	  
 	  //Display some startup info
-	  $(".loadingInfo").html("Staring camera...");
+	  $(".loadingInfo").html("Starting camera...");
 		$("#loader").show();	  	  		
 		$("#webcamButton").hide();
 	  	  	  	  		  
 	  
 	  //Set up parameters
-	  var constraints = { video: { facingMode: "environment" } };
+    
+    var w = $("#webcam").width();
+    var h = $("#webcam").height();
+    
+    if(h>w){
+      var t = w;
+      w=h;
+      h=t;
+    }
+                
+    
+	  var constraints = {
+      video: {
+        facingMode: "environment",
+        width: {
+          ideal: w,
+          max: 852
+        
+        },
+        height: {
+          ideal: h,
+          max: 480
+        }              
+      }
+    };
 	  	  
 	  // Activate the webcam stream.
 	  navigator.mediaDevices.getUserMedia(constraints).then(function(stream) {

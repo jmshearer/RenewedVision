@@ -13,7 +13,7 @@
 	height: 10px;
 	width: 10px;
 	border-radius: 10px;
-	background-color: #44c767;	
+	background-color: #24b9a8;	
 }
 
 #liveView {	
@@ -23,9 +23,9 @@
 
 
 .myButton {
-	background-color:#44c767;
+	background-color:#24b9a8;
 	border-radius:28px;
-	border:1px solid #18ab29;
+	border: 1px solid #24b9a8;
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
@@ -36,7 +36,7 @@
 	text-shadow:0px 1px 0px #2f6627;
 }
 .myButton:hover {
-	background-color:#5cbf2a;
+	background-color: #2eecd6;
 }
 .myButton:active {
 	position:relative;
